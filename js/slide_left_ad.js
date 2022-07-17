@@ -1,0 +1,26 @@
+/*banner slide 왼쪽 이미지에 마우스 커서 올리면 광고 보여짐*/
+  $(function(){
+    $('.left').mouseenter(function(){
+      if($('.ad_left_hover').css("display")=="none"){
+        $('.ad_left_hover').animate({
+          width:"toggle",
+          height:"toggle",
+          opacity:'1'
+        },'slow');
+      }
+    });
+    $('.hover_close1').click(function(){
+      $('.ad_left_hover').animate({
+        width:"toggle",
+        height:"toggle",
+        opacity:"0"
+      },'slow');
+    });
+    $('.hover_close2').click(function(){
+      $('.ad_left_hover').animate({
+        width:"toggle",
+        height:"toggle",
+        opacity:"0"
+      },'slow');
+    });
+  });

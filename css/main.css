@@ -1,0 +1,393 @@
+@charset 'utf-8';
+
+/*main*/
+
+    #container {width:100%; height:3280px; }
+    #main {width:100%; height:3280px;margin:0 auto;}
+     
+    /*배너*/
+    .banner_wrap {width:100%; height:363px; position:relative;}
+    .ad_left_box {width:55px; height:113px; position:absolute; top:20px; left:20%; cursor:pointer;}
+    .ad_left_box > .left {width:55px; height:77px;}
+    .ad_left_hover {width:980px; height:363px;position:absolute; top:0; left:24.3%; display: none;}
+    .ad_left_hover_wrap {position:relative;}
+    .hover_close1 {position:absolute; bottom:10px; right:75px;}
+    .hover_close2 {position:absolute; bottom:10px; right:10px;}
+
+    /*슬라이드*/
+    .slideadv {width:100%; height:316px;}
+    .advbox {width:100%; height:316px;margin:0 auto; background-color:#c3dcf5;}
+    .banner_980 {width:980px; height:316px;margin:0 auto;position:relative;   display:flex; justify-content:space-between;}
+    .banner {width:760px; height:100%; margin:0 auto;}
+    .banner_list {width:760px; height:100%; float:left;position:absolute; top:0;left:0;}
+    .banner_list:not(:first-child) {display:none;}
+    .banner_list > a {width:100%; height:100%;}
+    .banner_list > a > img {width:100%;height:100%; cursor:pointer;}
+
+    
+    .banner_tab {width:100%; height:47px;float:left;display:flex; flex-direction:row; justify-content:center; align-items:center;margin:0 auto;background-color:#f7f7f7;}
+    .banner_tab_wrap {width:980px; height:47px; margin:0 auto;}
+    #booklist {width:760px; height:47px; text-align:center; border-top:1px solid #222;}
+    #booklist > li {width:190px; height:47px; float:left;font-size:13px; font-weight:bold;padding: 15px 0 0 0; cursor:pointer;}
+
+    /*일간 주간 베스트*/
+    .bestseller {width:220px; height:316px;background-color:rgba(50, 50, 50, 0.5);position:absolute;top:0;right:0px; display:flex; flex-direction:column;}
+    .best_title {width:218px; height:35px;padding:7px 0 7px 10px;border-bottom:1px solid rgba(27, 27, 27, 0.4);}
+    .best_title a {text-decoration:none; color:#fff29c;}
+    .bestRank {display:flex; flex-direction:row;}
+    .bestRank .today {width:50%; height:30px;text-align:center;color:#fff;padding:7px 0 7px 0;font-size:12px;border-top:1px solid #b7b7b7;border-left:none; border-right:none; border-bottom:none; cursor:pointer;}
+    .bestRank .week {width:50%; height:30px;text-align:center;color:#fff;padding:7px 0 7px 0;font-size:12px;border:1px solid #b7b7b7; cursor:pointer;}
+
+    .bestRankList {display:flex; flex-direction:row;}
+    .today_list {width:100%; display:flex; flex-direction:column;margin:15px 5px 5px 5px;overflow:hidden;}
+    .today_list > li {width:100%; height:23px;}
+    .today_list > li > a {display:flex; flex-direction:row;text-decoration:none;font-size:12px;}
+    .today_list > li > a > .number {width:15px;text-align:center;color:#fff; font-weight:bold;padding-right:5px;}
+    .today_list > li > a > i { width:10px;text-align:center;font-size:10px;padding-top: 3px;color:#666;padding-left:5px;padding-right:8px;}
+    .today_list > li > a > p {width:146px;height:23px;overflow:hidden;text-overflow: ellipsis;white-space:nowrap; color:#fff; padding:0 0 0 5px;}
+    .today_list > li:nth-of-type(2) > a > i {color:#ef544d; padding-top:5px;}
+    .today_list > li:nth-of-type(5) > a > i {color:#2083e0;}
+    .today_list > li:nth-of-type(10) > a > i {color:#ef544d;}
+    .updown {width:10px;text-align:center;font-size:10px;color:#fff;}
+
+    .week_list {width:100%;display:flex; flex-direction:column;margin:15px 5px 5px 5px; overflow:hidden;display:none;}
+    .week_list > li {width:100%; height:23px;}
+    .week_list > li > a {display:flex; flex-direction:row;text-decoration:none;font-size:12px;}
+    .week_list > li > a > .number {width:15px;text-align:center;color:#fff; font-weight:bold;padding-right:5px;}
+    .week_list > li > a > i { width:10px;text-align:center;font-size:10px;padding-top: 3px;color:#666;padding-left:5px;padding-right:8px;}
+    .week_list > li > a > p {width:146px;height:23px;overflow:hidden;text-overflow: ellipsis;white-space:nowrap; color:#fff;padding:0 0 0 5px;}
+    .week_list > li:nth-of-type(2) > a > i {color:#ef544d; padding-top:5px;}
+    .week_list > li:nth-of-type(3) > a > i {color:#ef544d; padding-top:5px;}
+    .week_list > li:nth-of-type(4) > a > i {color:#2083e0;}
+    .week_list > li:nth-of-type(5) > a > i {color:#ef544d; padding-top:5px;}
+    .week_list > li:nth-of-type(6) > a > i {color:#2083e0;}
+    .week_list > li:nth-of-type(9)> a > .new {color:#ef544d;font-size:10px;padding-top:3px;}
+
+    /*도서 추천*/
+    .trend {width:100%; height:556px;  margin:0 auto;display:flex; flex-direction:row;justify-content:center;}
+    .ad_left {width:90px; height:323px;  margin:60px 20px 0 0;}
+    .ad_top {width:90px; height:184px;margin:10px 0 0 0; position:relative;overflow:hidden;}
+    .ad_top1 {width:360px; height:158px; }
+    .ad_top_img > li {float:left;}
+    .aprev {width:10px; height:13px; position:absolute; top:86%; left:32%;color:#cbcbcb; background-color:#efefef;font-size:10px;padding:0 0 1px 3px; cursor:pointer;}
+    .anext {width:10px; height:13px; position:absolute; top:86%; right:32%;color:#cbcbcb; background-color:#efefef;font-size:10px;padding:0 0 1px 3px; cursor:pointer;}
+    .ad_bottom {width:90px; height:140px; margin:10px 0 0 0;}
+    .trend_wrap {width:980px; height:480px;margin:0 110px 0 0px;}
+    .ad {width:980px; height:130px; display:flex; flex-direction: row; justify-content: space-between;align-items:center;}
+    .ad_num {width:320px; height:80px;}
+    .recommend_wrap {width:980px; height:356px; margin:0 auto;display:flex;margin:50px 0 0 0;}
+    .recommend {width:756px; height:356px;  position:relative;border-top:1px solid #000;border-bottom:1px solid #f7f7f7;margin:0 15px 0 0;}
+    .first_text {width:200px; height:36px; display:flex;position:absolute;justify-content: center;background-color:#fff; top:-22px;left:50%;transform:translateX(-50%);padding:5px;}
+    .first_text span{font-size:20px;line-height:40px;}
+    .first_text .reco {font-size:20px; color:#d74b45;line-height:40px;}
+    #interslide {width:640px; height:271px; margin:50px 0 0 50px;overflow:hidden;}
+    .book_slide {width:2285px;}
+    .interlist {width:457px; height:271px;float:left; display:flex; flex-flow:wrap column; justify-content:space-around; align-items:center;}
+    .book_img {width:37%; height:90%; margin:0 15px 0 0px;position:relative;}
+    .book_img > img {width:100%; height:97%; box-shadow:5px 5px 10px #eee;}
+    .heart {position:absolute;top:-12px;}
+    .book_title {width:52%; height:40%;margin: 0 15px 0 0; }
+    .title > h3 {font-size:16px;font-weight:bold;line-height:40px;}
+    .book_content {width:52%; height:40%;margin: 0 15px 0 0; font-size:12px; background-color:#f7f7f7; padding:10px;}
+    .star {margin:40px 0 0 0;}
+    .book_title > p {width:100%; height:40px; }
+    .book_title1 > p {width:100%; height:40px; }
+    .book_slide > li:nth-of-type(4) {background-color:gold;}
+    .book_img1 {width:37%; height:90%;margin:0 15px 0 0px; position:relative;}
+    .book_title1 {width:52%; height:40%;margin: 0 15px 0 0; }
+    .book_content1 {width:52%; height:40%;margin: 0 15px 0 0;font-size:12px; background-color:#f7f7f7; padding:10px;}
+    .book_img1 > img {width:100%; height:77%;margin:50px 0 0 0;box-shadow:5px 5px 10px #eee;}
+    .heart1 {position:absolute;top:38px;}
+    
+    
+    .prev {position:absolute; top:50%;transform:translateY(-50%);font-size:35px; left:0;color:#ccc;cursor:pointer;}
+    .prev:hover {color:#d74b45;}
+    .next {position:absolute; top:50%;transform:translateY(-50%);font-size:35px; right:0;color:#ccc;cursor:pointer;}
+    .next:hover {color:#d74b45;}
+
+    .trendIssue {width:224px; height:356px; border-top:1px solid #000;position:relative;}
+    .second_text > h4 {position:absolute; top:-22px;}
+    .trendIssue_img {width:224px; height:356px;}
+    .trendIssue_img > a > img {width:100%;height:100%;}
+    
+    /*출판사 책 소개*/
+    .choice{width:980px; height:365px; margin:0 auto;display:flex;justify-content:space-between;}
+    .choice_num1 {width:363px; height:365px; }
+    .choice_title {width:363px; height:30px;}
+    .main_choice {font-weight:bold; color:#424242; font-size:18px;}
+    .main_choice2 {font-weight:bold; font-size:18px; color:#ef544d;}
+    .choice_img {width:363px; height:334px; border:1px solid #ccc;}
+    .choice_img img {width:100%; height:100%;}
+
+    .choice_num2 {width:363px; height:365px; }
+    .choice_title2 {width:363px; height:30px;}
+    .media_wrap {width:363px; height:334px; overflow:hidden;position:relative;display:flex; justify-content:center; align-items:center;border:1px solid #ccc;}
+    .media_slides {width:363px; height:334px; }
+    .media_slides li:first-child {display:block;}
+    .media_slides li:not(first-child) {display:none;}
+    .dot1 {position:absolute; top:0; width:15%; height:40px; display:flex; flex-direction:row; font-size:8px; justify-content:space-evenly; align-items:center; margin:0 auto;}
+    .dot1 > .on {color:#4cc1ec;}
+    .mprev {position:absolute; top:40%;left:0;font-size:25px; cursor:pointer; color:#ccc; padding:0 10px;}
+    .mprev:hover {color:#ef544d;}
+    .mnext {position:absolute; top:40%; right:0;font-size:25px; cursor:pointer; color:#ccc; padding:0 10px;}
+    .mnext:hover {color:#ef544d;}
+
+    .choice_num3 {width:220px; height:365px; }
+    .choice_title3 {width:220px; height:30px;}
+    .how_wrap {width:220px; height:334px;position:relative;overflow:hidden; position:relative;display:flex; justify-content:center; align-items:center;border:1px solid #ccc;}
+    .how_slides {width:220px; height:334px;}
+    .how_slides li:first-child {display:block;}
+    .how_slides li:not(first-child) {display:none;}
+    .dot2 {position:absolute; top:0; width:15%; height:30px;display:flex; flex-direction:row; font-size:8px; justify-content:space-evenly; align-items:center; margin:0 auto;}
+    .dot2 > li {color:#ccc;}
+    .dot2 > .on {color:#4cc1ec;}
+    .hprev {position:absolute; top:40%;left:0;font-size:25px; cursor:pointer; color:#ccc; padding:0 10px;}
+    .hprev:hover {color:#ef544d;}
+    .hnext {position:absolute; top:40%; right:0;font-size:25px; cursor:pointer; color:#ccc; padding:0 10px;}
+    .hnext:hover {color:#ef544d;}
+
+    .login_recommend {width:980px; height:145px; background-color:rgb(197, 209, 171); margin:10px auto;}
+
+    /*분야별 추천*/
+    .category {width:980px; height:500px; margin:0 auto;}
+    .category_recommend_wrap {width:980px; height:481px;  margin:50px auto;position:relative;border-top:1px solid #000;}
+    .recommend_title {background-color:#fff; width:200px; height:32px;margin:0 auto;display:flex;
+      position:absolute;justify-content: center;background-color:#fff; top:-15px;left:50%;transform:translateX(-50%);padding:5px;}
+    .title_category {font-size:20px; } 
+    .title_recommend {font-size:20px;color:#ef544d;}
+    .category_recommend {width:980px; height:70px; border-bottom:1px solid #ccc;}
+    .category_tab {width:80%; height:73px;display:flex; flex-direction:row;align-items:center;justify-content:space-around;margin:0 auto; padding:40px 0 0 0;}
+    .category_tab > li {width:100%; height:100%; position:relative; text-align:center;}
+    .category_tab > li > i {position:absolute;bottom:-13px;left:50%; transform:translateX(-50%);color:transparent;}
+    .category_tab > li.on > i {color:#ef544d;}
+    .category_tab > li.on {color:#ef544d;border-bottom:3px solid #ef544d;display:block;}
+    
+    .tab_content {width:900px; height:280px; display:flex;align-items: center;margin:0 auto; }
+    .literature {width:1800px; height:280px;  display:flex;align-items:center;margin:0 auto;}
+    .liter{width:900px; height:280px; display:flex; }
+    .liter > li {width:140px; height:280px;margin:0px 10px 10px 10px;}
+    .liter > li > a {text-decoration:none;color:#000;}
+    .human {width:900px; height:280px; display:flex;align-items:center;margin:0 auto;}
+    .hu {width:900px; height:280px; display:flex; }
+    .hu > li {width:140px; height:280px; margin:0px 10px 10px 10px;}
+    .hu> li > a {text-decoration:none;color:#000;}
+    .economy {width:900px; height:280px;display:flex;align-items:center;margin:0 auto;}
+    .eco {width:900px; height:280px; display:flex;}
+    .eco > li {width:140px; height:280px;margin:0px 10px 10px 10px;}
+    .eco > li > a {text-decoration:none;color:#000;}
+    .child {width:900px; height:280px;  display:flex;align-items:center;margin:0 auto;}
+    .ch {width:900px; height:280px; display:flex; }
+    .ch > li {width:140px; height:280px;margin:0px 10px 10px 10px;}
+    .ch > li > a {text-decoration:none;color:#000;}
+    .study {width:900px; height:280px;  display:flex;align-items:center;margin:0 auto;}
+    .st {width:900px; height:280px; display:flex;}
+    .st > li {width:140px; height:280px; margin:0px 10px 10px 10px;}
+    .st > li > a {text-decoration:none;color:#000;}
+    .global {width:900px; height:280px;  display:flex;align-items:center;margin:0 auto;}
+    .gl {width:900px; height:280px; display:flex;}
+    .gl > li {width:140px; height:280px; margin:0px 10px 10px 10px;}
+    .gl > li > a {text-decoration:none;color:#000;}
+    .cd {width:900px; height:280px; display:flex;align-items:center;margin:0 auto;}
+    .dvd {width:900px; height:280px; display:flex;}
+    .dvd > li {width:140px; height:280px;margin:0px 10px 10px 10px;}
+    .dvd > li > a {text-decoration:none;color:#000;}
+    .content_img {padding-top:36px;margin:0 0 0 5px;}
+    .content_title {width:125px; height:34px;  font-size:12px; text-align:center;margin:10px 0 0 0;font-weight:bold;}
+    .content_title:hover {text-decoration:underline;}
+    .content_price {text-align:center;}
+    .price {font-size:12px; text-align:center;}
+    .point1 {font-size:12px; text-align:center;}
+    .dvd > li > a > .content_img > img{width:120px; height:174px;}
+    .dvd > li > a > .content_title {overflow:hidden;}
+    
+    #ad_box {width:880px; height:80px;  margin:0 auto;position:absolute; bottom:30px;left:5%;}
+
+    /*이달의 책 & 정가할인*/
+    .point {width:100%; height:355px; }
+    .special {width:980px; height:355px; margin: 0 auto;display:flex;justify-content:space-between;}
+    .month {width:395px; height:355px; }
+    .month_title {width:395px; height:40px; display:flex;border-bottom:1px solid #000;}
+    .month_left {width:70%; height:100%; }
+    .attention {font-size:20px; color:#d74b45;line-height:40px;}
+    .month_text {font-size:20px; line-height:40px;}
+    .month_more {font-size:12px;}
+    .month_more:hover {text-decoration:underline;}
+    .month_right {width:30%; height:100%; display:flex;justify-content: end;align-items:center;}
+    .month_number {font-size:12px;margin:5px 0 0 0;}
+    .mon_prev {width:20px; height:20px; border:1px solid #ccc;font-size:12px; text-align:center;color:#ccc;margin:0 0 0 10px;}
+    .mon_prev:hover {background-color:#f8f8f8;}
+    .mon_next {width:20px; height:20px; border:1px solid #ccc;font-size:12px; text-align:center;color:#ccc;}
+    .mon_next:hover {background-color:#f8f8f8;}
+    .month_book_list {width:395px; height:315px; position:relative;overflow:hidden;}
+    .list {width:2070px; height:302px;  position:absolute;margin:7px 0 0 0;}
+    .list > li {width:345px;height:302px; float:left;margin:0 0 0 25px;}
+    .list > li > a {text-decoration:none;}
+    .book_box {width:345px; height:151px; display:flex; align-items: center;}
+    .book_box:hover .month_text_title {text-decoration:underline;}
+    .month_img_box {width:77px; height:104px; }
+    .month_img_box > img {width:100%; height:100%;}
+    .month_text_box {width:259px; height:104px; margin:0 0 0 10px;}
+    .star {width:150px; height:20px;margin:0px; }
+    .star > img {width:80px; height:100%;}
+    .rate {font-size:20px;margin:0 0 0 5px; color:#d74b45}
+    .month_text_title {width:259px; height:20px; margin:5px 0 0 0;
+      font-size:14px;color:#555;overflow:hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: bold;}
+    .month_allprice {width:150px; height:20px;  margin:5px 0 0 0;font-size:14px;}
+    .month_price {text-decoration:line-through; color:#aaa;}
+    .month_sale_price {color:#555; font-weight:bold;}
+
+    .sale {width:541px; height:355px; position:relative;}
+    .sale_title {width:541px; height:40px; display:flex;}
+    .only_discount {width:94px; height:40px;line-height:40px;text-align:center;}
+    .price_discount {width:94px; height:40px;  line-height:40px;text-align:center;}
+    .price_more {font-size:12px; line-height:50px;float:right; margin: 0 0 0 280px;}
+    .price_more:hover {text-decoration: underline;}
+    .special_book {width:541px; height:315px; padding:40px 0 0 0;}
+    .sp_wrap {width:498px; height:241px; padding:0px 0 0 0;margin:0px 20px 46px 21px;align-items:center;overflow:hidden;}
+    .sp_book_list {width:1000px; height:241px; }
+    .sp_prev {position:absolute;top:50%;left:0; font-size:25px; font-weight:bold;color:#ccc;cursor:pointer;display:none;}
+    .sp_prev:hover {color:#d74b45;}
+    .sp_next {position:absolute;top:50%; right:0; font-size:25px; font-weight:bold;color:#ccc;cursor:pointer; display:none;}
+    .sp_next:hover {color:#d74b45;}
+    .sp_book_list > li {width:500px; height:241px; float:left;}
+    .sp_content {width:120px; height:241px; float:left;margin:0 4px 0 1px; position:relative;}
+    .down_arrow {width:65px; height:50px; position:absolute;top:45%;left:42%;}
+  
+    .s_book_list {width:1000px; height:241px; }
+    .s_book_list > li {width:500px; height:241px; float:left;}
+    .s_content {width:120px; height:241px; float:left;margin:0 4px 0 1px; position:relative;}
+    .down_arrow1 {width:65px; height:50px; position:absolute;top:45%;left:42%;}
+    .sp_discount {width:65px; height:10px; position:absolute;font-size:11px;top:47%;left:50%;font-weight:bold;color:#FEFFB0;}
+    .percent {width:65px; height:10px; font-size:16px; position:absolute;top:53%;left:57%;font-weight:bold;color:#fff;}
+    .sp_content > a {display:flex; flex-direction:column;align-items:center; justify-content:space-between;text-decoration:none;}
+    .sp_content:hover > a > .sp_text_box > .sp_text_title {text-decoration:underline;}
+    .sp_img_box {width:103px; height:146px; }
+    .sp_img_box > img {width:100%;height:100%;}
+    .sp_text_box {width:121px; height:68px; margin:20px 0 0 0;}
+    .sp_text_title {width:121px; height:34px;font-size:12px; color:#555; overflow:hidden; text-overflow: ellipsis; word-break: break-word;text-align:center;font-weight:bold;}
+    .sp_allPrice {display:flex; flex-direction: column;text-align:center;}
+    .sp_text_price {font-size:11px; text-decoration: line-through;color:#777;}
+    .sp_text_salePrice {font-size:12px;color:#555;font-weight:bold;}
+    
+    .s_content > a {display:flex; flex-direction:column;align-items:center; justify-content:space-between;text-decoration:none;}
+    .s_content:hover > a > .s_text_box > .s_text_title {text-decoration:underline;}
+    .s_img_box {width:103px; height:146px; }
+    .s_img_box > img {width:100%;height:100%;}
+    .s_text_box {width:121px; height:68px; margin:20px 0 0 0;}
+    .s_text_title {width:121px; height:34px;font-size:12px; color:#555; overflow:hidden; text-overflow: ellipsis; word-break: break-word;text-align:center;font-weight:bold;}
+    .s_allPrice {display:flex; flex-direction: column;text-align:center;}
+    .s_text_price {font-size:11px; text-decoration: line-through;color:#777;}
+    .s_text_salePrice {font-size:12px;color:#555;font-weight:bold;}
+    
+    /*CD,DVD,Special*/
+    .product_section {width:980px; height:597px;  margin:40px auto;display:flex; justify-content:space-between;}
+    .product {width:320px; height:590px; }
+    .product_title {width:320px; height:30px;  display:flex; justify-content:space-between; 
+      line-height:30px; padding:0 0 0 2px; border-bottom:1px solid #000;}
+    .product_title > h4 {font-size:16px; color:#3d4d5f;}
+    .product_more {font-size:12px;color:#666;}
+    .product_more:hover {text-decoration:underline;}
+    
+    .product_img {width:320px; height:298px; background-color:#f8f8f8;display:flex;justify-content:center;align-items:center; position:relative;}
+    .product_wrap {width:216px; height:259px; overflow:hidden;}
+    .product_slide {width:648px; height:216px; display:flex;}
+    .product_list {width:216px; height:259px;  }
+    .product_list:hover {text-decoration: underline;}
+    .product_list > a {text-decoration:none; color:#222;}
+    .product_list > a > img{width:216px; height:216px;}
+    .product_list > a > .product_title1 {width:216px; height:21px; font-size:12px;text-overflow:ellipsis; white-space:nowrap;
+        padding:0 5px 0 5px; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+    .product_list > a > .product_price {width:216px; height:22px;text-align:center;}
+    .product_origin {font-size:14px;text-decoration:line-through; color:#aaa;}
+    .product_sale_price {font-size:14px;font-weight:bold;color:#000;}
+    .product_point {font-size:12px;color:#000;}
+    .pro_prev {position:absolute; top:40%; left:25px;}
+    .pro_prev:hover {cursor:pointer}
+    .pro_next {position:absolute; top:40%; right:25px;}
+    .pro_next:hover {cursor:pointer}
+
+    .product_list > a > img {position:relative}
+    .play {width:28px; height:28px; position:absolute; bottom:67px;right:57px; }
+    .play > img {width:100%;height:100%;opacity:0.5;}
+    
+    .product_dvd_wrap {width:171px; height:259px; overflow:hidden;}
+    .product_dvd_slide {width:513px; height:216px; display:flex;}
+    .product_dvd_list {width:171px; height:259px; }
+    .product_dvd_list:hover {text-decoration: underline;}
+    .product_dvd_list > a {text-decoration:none; color:#222;}
+    .product_dvd_list > a > .product_title1 {width:171px; height:21px; font-size:12px;text-overflow:ellipsis; white-space:nowrap;  padding:0 5px 0 5px;
+      text-align:center;overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+    .product_dvd_list > a > .product_price {width:171x; height:22px;text-align:center;}
+    .product_dvd_list > a > img{width:171px; height:216px;}
+    .pro_prev1 {position:absolute; top:40%; left:25px;}
+    .pro_prev1:hover {cursor:pointer}
+    .pro_next1 {position:absolute; top:40%; right:25px;}
+    .pro_next1:hover {cursor:pointer}
+
+    .product_second_img {width:320px; height:178px; background-color:#f8f8f8;
+       display:flex; justify-content: space-evenly; align-items:center; border-top:1px solid #ececec;}
+    .product_s_img {width:106px; height:133px;  position:relative;}
+    .play_small {width:19px; height:19px; position:absolute; bottom:31px;right:5px;}
+    .play_small > img {width:100%;height:100%;}
+    .product_s_img > a {text-decoration:none;color:#3d4d5f;}
+    .product_s_img > a > img {width:106px; height:106px; border:1px solid #ececec;}
+    .second_title {width:106px; height:15px; font-size:12px; overflow:hidden; text-overflow: ellipsis; white-space:nowrap; padding:0 0 0 5px;}
+    .product_s_img:hover {text-decoration:underline;}
+    
+
+
+    .product_ad {width:320px; height:80px; margin:10px 0 0 0;position:relative;}
+    .dotdot{width:7px; height:7px;position:absolute;top:2px; left:9%;}
+    .dotdot img {width:100%; height:100%;}
+
+    .product_box {width:320px; height:476px;background-color:#f8f8f8; display:flex; justify-content:center; align-items:center;position:relative;}
+    .product_box_wrap {width:216px; height:397px; overflow:hidden;}
+    .product_content {width:1080px; height:397px; }
+    .product_content_list {width:216px; height:397px;float:left;display:flex; justify-content: center; align-items:center;}
+    .product_content_list > a {text-decoration:none;}
+    .product_content_list:hover > a > .product_content_title {text-decoration: underline;}
+    .product_content_img {width:170px; height:250px; }
+    .product_content_img > img {width:100%; height:100%;}
+    .product_num {width:170px; height:30px; font-size:20px;text-align:center;margin:20px 0 0 0; text-decoration:underline; color:#3d4d5f;}
+    .product_content_title {width:170px; height:21px; font-size:12px;text-align:center;
+      overflow:hidden; text-overflow: ellipsis; white-space: nowrap;color:#222; margin:10px 0 0 0;}
+    .product_content_price {width:170px; height:22px; text-align:center;}
+    .product_content_origin {font-size:14px;color:#aaa;text-decoration: line-through;}
+    .product_content_sale_price {font-size:14px;font-weight:bold; color:#222;}
+    .product_prev {position:absolute;top:50%; left:25px;}
+    .product_next {position:absolute; top:50%; right:25px;}
+
+    /*서비스 혜택*/
+    .service {width:980px; height:150px; margin:0 auto;}
+    .service_title {width:980px; height:36px;  display:flex; justify-content: space-between; align-items:center;border-bottom: 1px solid #000;;}
+    .service_title > h4 {font-size:20px;}
+    .service_notice > a {display:flex;padding:0 5px 0 0; align-items:center;text-decoration:none;}
+    .service_notice > a > h5 {font-size:12px;color:#222;}
+    .service_notice > a > img {padding:0px 0 0 2px;}
+    .service_notice > a > p {font-size:11px;padding: 0 0 0 5px;color:#666;}
+    .service_content {width:980px; height:113px;  display:flex; justify-content:space-between;padding:0 70px 0 0;}
+    .service_text1 {padding:20px 0 0 0;}
+    .service_text2 {padding:20px 0 0 0;}
+    .service_use > a > .service_img {width:19px; height:19px; margin:0 6px 0 0;}
+    .service_text2 > .service_use > a{display:flex;align-items:center; padding:5px 0 0 0;}
+    .service_text2 > .service_use > a:hover > img {transform:rotate(360deg); transition:all ease 1s;}
+    .service_text2 > .service_use > a:not(:hover) > img {transform:rotate(0deg);transition:all ease 1s;}
+    .service_text3 {padding:20px 0 0 0;}
+    .service_text4 {padding:20px 0 0 0;}
+    .service_text4 > .service_text_title {padding:0 0 5px 0;}
+    .service_text_title {font-size:14px;}
+    .service_use > a{font-size:11px; color:#888;text-decoration:none;}
+    .service_use > a:hover {color:#666;}
+    .service_center {width:144px;display:flex; justify-content: space-between;}
+    .service_use1 {font-size:11px; color:#000;padding:0 0 5px 0;}
+    .service_number {font-size:11px;}
+
+    /*할인권*/
+    .coupon {width:100%; height:59px; background-color:#58cfc7; margin:50px 0 0 0;}
+    .coupon_wrap {width:980px; height:59px;display:flex;margin:0 auto;}
+    .coupon_friend {width:490px; height:59px; border-right:1px solid #fff;display:flex; align-items: center;justify-content: center;}
+    .coupon_friend > a {text-decoration:none;}
+    .coupon_cd {width:490px; height:59px;display:flex; align-items: center; justify-content: center;}
+    .coupon_cd > a {text-decoration:none;}
+    .coupon_content1 {font-size:17px; color:#fff; letter-spacing: -1px;}
+    .coupon_content2 {font-size:17px; color:#fff5b1;}
